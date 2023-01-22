@@ -413,8 +413,11 @@ class WidgetHelper {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: Get.width * .05),
         child: TextFormField(
-          // textDirection: TextDirection.rtl,
-          onChanged: onChanged,
+          onChanged: (value){
+            Get.appUpdate();
+            onChanged!(value);
+          },
+          textDirection: intl.Bidi.detectRtlDirectionality(controller!.text) ? TextDirection.rtl : TextDirection.ltr,
           onTap: onTap,
           validator: validate,
           controller: controller,
@@ -422,7 +425,6 @@ class WidgetHelper {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           cursorColor: ColorUtils.kShadowColor,
           cursorHeight: Get.height * .03,
-          textDirection: TextDirection.ltr,
           textAlignVertical: TextAlignVertical.center,
           style: const TextStyle(color: Colors.black, fontSize: 14),
           maxLines: maxLine,
@@ -491,8 +493,11 @@ class WidgetHelper {
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: Get.width * .05),
         child: TextFormField(
-          // textDirection: TextDirection.rtl,
-          onChanged: onChanged,
+          onChanged: (value){
+            Get.appUpdate();
+            onChanged!(value);
+          },
+          textDirection: intl.Bidi.detectRtlDirectionality(controller!.text) ? TextDirection.rtl : TextDirection.ltr,
           onTap: onTap,
           validator: validate,
           controller: controller,
@@ -501,7 +506,6 @@ class WidgetHelper {
           autovalidateMode: AutovalidateMode.onUserInteraction,
           cursorColor: ColorUtils.kShadowColor,
           cursorHeight: Get.height * .03,
-          textDirection: TextDirection.ltr,
           textAlignVertical: TextAlignVertical.center,
           style: const TextStyle(color: Colors.black, fontSize: 14),
           maxLines: maxLine,
@@ -562,8 +566,11 @@ class WidgetHelper {
     return Directionality(
       textDirection: TextDirection.ltr,
       child: TextFormField(
-        // textDirection: TextDirection.rtl,
-        onChanged: onChanged,
+        onChanged: (value){
+          Get.appUpdate();
+          onChanged!(value);
+        },
+        textDirection: intl.Bidi.detectRtlDirectionality(controller!.text) ? TextDirection.rtl : TextDirection.ltr,
         onTap: onTap,
         validator: validate,
         controller: controller,
