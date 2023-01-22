@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+
+class AppScaffold extends StatelessWidget {
+  const AppScaffold({
+    Key? key,
+    required this.title,
+    required this.slivers,
+    this.reverse = false,
+  }) : super(key: key);
+
+  final String title;
+  final List<Widget> slivers;
+  final bool reverse;
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultStickyHeaderController(
+      child: SafeArea(
+        child: Scaffold(
+          body: CustomScrollView(
+            slivers: slivers,
+            reverse: reverse,
+          ),
+          // floatingActionButton: const _FloatingActionButton(),
+        ),
+      ),
+    );
+  }
+}
+
+class Header extends StatelessWidget {
+  const Header({
+    Key? key,
+    this.index,
+    this.title,
+    this.color = Colors.lightBlue,
+  }) : super(key: key);
+
+  final String? title;
+  final int? index;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print('hit $index');
+      },
+      child: Container(
+        height: 30,
+        color: color,
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        alignment: Alignment.centerLeft,
+        child: Text(
+          title ?? 'Header #$index',
+          style: const TextStyle(color: Colors.white, fontSize: 18),
+        ),
+      ),
+    );
+  }
+}

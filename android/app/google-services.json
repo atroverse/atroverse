@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "453552203181",
+    "project_id": "atroverse-e0e19",
+    "storage_bucket": "atroverse-e0e19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453552203181:android:35fca4eca8349a7bb8ed24",
+        "android_client_info": {
+          "package_name": "com.example.atroverse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453552203181-87el276vpnk8fcnenl7bonc6qsvmc98i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN1hPADVUhFbvlujrVtztJrSBixcrg9jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453552203181-87el276vpnk8fcnenl7bonc6qsvmc98i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "453552203181-ha0tsfbjp9fmv2jhqqhr5shmi47q9ola.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.atrovers"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
